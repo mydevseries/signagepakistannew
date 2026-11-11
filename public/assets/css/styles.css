@@ -800,6 +800,12 @@ a.drawer__group:hover { text-decoration: underline; text-underline-offset: 3px; 
 .split { display: grid; gap: 44px; align-items: center; }
 @media (min-width: 1024px) { .split { grid-template-columns: 1fr 1.1fr; gap: 72px; } }
 .split__copy .lead { margin-top: 18px; }
+.split__copy p,
+.split__copy .split__more,
+.split__copy .split_more,
+.split_copy p,
+.split_copy .split__more,
+.split_copy .split_more { margin-top: 14px; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.65; color: var(--c-text); }
 .split__img { border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 5 / 4; box-shadow: var(--shadow-lg); background: var(--c-soft); }
 .split__img img { width: 100%; height: 100%; object-fit: cover; }
 .ticks { display: grid; gap: 12px 20px; margin-top: 26px; }
@@ -991,7 +997,7 @@ a.project { color: inherit; }
 .bz-intro { display: grid; gap: 48px; align-items: center; }
 @media (min-width: 1024px) { .bz-intro { grid-template-columns: 1fr 1.05fr; gap: 72px; } }
 .bz-intro__copy .lead { margin-top: 18px; }
-.bz-intro__copy > p:not(.lead) { margin-top: 14px; font-size: 16px; line-height: 1.7; color: var(--c-text); }
+.bz-intro__copy > p:not(.lead) { margin-top: 14px; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.65; color: var(--c-text); }
 .bz-intro__copy .btn-row { margin-top: 30px; }
 .bz-steps { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--c-border); }
 .bz-steps__label { display: block; margin-bottom: 12px; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--c-muted); }
@@ -1146,7 +1152,7 @@ a.project { color: inherit; }
 .bz-trust { display: grid; gap: 44px; align-items: center; }
 @media (min-width: 1024px) { .bz-trust { grid-template-columns: 1fr 1.1fr; gap: 72px; } }
 .bz-trust .lead { margin-top: 18px; }
-.bz-trust__copy > p:last-child { margin-top: 24px; font-size: 15.5px; }
+.bz-trust__copy > p:last-child { margin-top: 24px; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.65; }
 .bz-gains { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .bz-gains li { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); font-size: 14.5px; font-weight: 700; color: #fff; }
 .bz-gains .i { width: 18px; height: 18px; color: var(--c-green-glow); }
@@ -1175,7 +1181,8 @@ a.project { color: inherit; }
 /* =====================================================================
    Wooden Signs page: client sections (wd-)
    ===================================================================== */
-.split__more { margin-top: 14px; font-size: 16px; line-height: 1.7; color: var(--c-text); }
+.split__more,
+.split_more { margin-top: 14px; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.65; color: var(--c-text); }
 
 /* benefits: title + photo on the left, numbered list on the right */
 .wd-benefits { display: grid; gap: 40px; }
@@ -1241,8 +1248,8 @@ a.project { color: inherit; }
 .wd-care .i { flex: none; width: 20px; height: 20px; margin-top: 1px; color: var(--c-green); }
 
 /* why choose */
-.wd-why__text p { margin-top: 14px; font-size: 16px; line-height: 1.7; color: var(--c-text); }
-.wd-why__text p:first-child { margin-top: 18px; font-size: clamp(17px, 1.35vw, 19px); color: var(--c-ink); }
+.wd-why__text p { margin-top: 14px; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.65; color: var(--c-text); }
+.wd-why__text p:first-child { margin-top: 18px; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.65; color: var(--c-ink); }
 
 /* =====================================================================
    Wooden Signs page refinements (main.page--compact)
@@ -1396,7 +1403,7 @@ a.project { color: inherit; }
 @media (min-width: 900px) { .ac-compare { grid-template-columns: repeat(4, 1fr); } }
 .ac-vs p { margin-top: 12px; font-size: 15px; line-height: 1.6; color: var(--c-text); }
 .ac-after { flex-basis: 100%; max-width: 720px; margin: 0 auto 6px; text-align: center; }
-.ac-after p { font-size: 16px; line-height: 1.6; color: var(--c-text); }
+.ac-after p { font-size: clamp(17px, 1.3vw, 19px); line-height: 1.65; color: var(--c-text); }
 .ac-after p + p { margin-top: 6px; font-weight: 700; color: var(--c-ink); }
 .bz-order p + p { margin-top: 8px; }
 
@@ -1411,9 +1418,9 @@ a.project { color: inherit; }
 @media (min-width: 1100px) { .hl-factors-4 { grid-template-columns: repeat(4, 1fr); } .hl-factors-3 { grid-template-columns: repeat(3, 1fr); max-width: 1080px; margin-inline: auto; } }
 .hl-pk { display: grid; gap: 32px; align-items: start; }
 @media (min-width: 1024px) { .hl-pk { grid-template-columns: .9fr 1.1fr; gap: 64px; } }
-.hl-pk__text p { font-size: 16px; line-height: 1.75; color: rgba(255,255,255,.75); }
+.hl-pk__text p { font-size: clamp(17px, 1.3vw, 19px); line-height: 1.65; color: rgba(255,255,255,.75); }
 .hl-pk__text p + p { margin-top: 14px; }
-.hl-pk__text p:first-child { font-size: clamp(17px, 1.3vw, 19px); color: #fff; }
+.hl-pk__text p:first-child { font-size: clamp(17px, 1.3vw, 19px); line-height: 1.65; color: #fff; }
 
 /* Standard product-page overview (all product pages): copy and photo aligned from the top, one image shape */
 .split--overview { align-items: start; }
@@ -1447,7 +1454,7 @@ a.project { color: inherit; }
 @media (min-width: 1024px) { .lc-uses { grid-template-columns: repeat(6, 1fr); } .lc-uses > * { grid-column: span 2; } .lc-uses > :nth-child(n+4) { grid-column: span 3; } }
 @media (min-width: 1024px) { .bz-order.lc-cta { grid-template-columns: 1.35fr 1fr; gap: 56px; } }
 .lc-cta .h2 { color: #fff; }
-.lc-cta__text p { margin-top: 12px; font-size: 16px; line-height: 1.7; color: rgba(255,255,255,.72); }
+.lc-cta__text p { margin-top: 12px; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.65; color: rgba(255,255,255,.72); }
 .lc-cta__text p:first-of-type { margin-top: 16px; font-weight: 700; color: #fff; }
 .lc-cta__text .btn-row { margin-top: 24px; }
 .lc-contact { padding: 26px; border-radius: var(--r-md); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); color: #fff; }
